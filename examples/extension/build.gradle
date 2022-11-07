@@ -1,6 +1,8 @@
 plugins {
   id "java"
 
+  id "scala"
+
   /*
   Instrumentation agent extension mechanism expects a single jar containing everything required
   for your extension. This also includes any external libraries that your extension uses and
@@ -90,6 +92,9 @@ dependencies {
   and added to the resulting jar for our extension's distribution.
    */
   implementation 'org.apache.commons:commons-lang3:3.11'
+
+  implementation 'org.scala-lang:scala-library:2.13.6'
+  implementation 'org.typelevel:cats-effect_3:3.3.14'
 
   //All dependencies below are only for tests
   testImplementation("org.testcontainers:testcontainers:1.16.2")
